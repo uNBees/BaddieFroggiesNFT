@@ -27,7 +27,7 @@ const CollectionConfig: CollectionConfigInterface = {
     maxMintAmountPerTx: 5,
   },
   contractAddress: "0x9B2293c1EB08B197eCFd10d5122b45b1F24dcE8F",
-  marketplaceIdentifier: 'my-nft-token',
+  marketplaceIdentifier: 'baddie-froggies',
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,
 };
