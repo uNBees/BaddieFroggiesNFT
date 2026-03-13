@@ -371,7 +371,7 @@ export default class Dapp extends React.Component<Props, State> {
       CollectionConfig.contractAddress!,
       ContractAbi,
       this.provider.getSigner(),
-    ) as NftContractType;
+    ) as unknown as NftContractType;
 
     this.refreshContractState();
   }
