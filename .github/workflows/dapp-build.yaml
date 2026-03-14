@@ -13,14 +13,15 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-    
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup Node.js (Smart contract)
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
+          node-version: '20'
           cache: yarn
           cache-dependency-path: smart-contract/yarn.lock
 
@@ -33,8 +34,9 @@ jobs:
         run: cd ./smart-contract && yarn compile
 
       - name: Setup Node.js (DAPP)
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
+          node-version: '20'
           cache: yarn
           cache-dependency-path: minting-dapp/yarn.lock
 
