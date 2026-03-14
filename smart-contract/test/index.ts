@@ -252,7 +252,7 @@ describe(CollectionConfig.contractName, function () {
       await owner.getAddress(),
       {
         // Set gas limit to the maximum value since this function should be used off-chain only and it would fail otherwise...
-        gasLimit: BigNumber.from('0xffffffffffffffff'),
+        gasLimit: BigNumber.from('0xFFFFFF'),
       },
     )).deep.equal(expectedWalletOfOwner);
 
